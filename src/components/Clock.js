@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/no-distracting-elements */
 // @ts-nocheck
 import React from "react";
+import Buttons from "./Buttons";
 class Clock extends React.Component {
   constructor(props) {
     super(props);
@@ -47,24 +48,15 @@ class Clock extends React.Component {
     const { date, locale, direction } = this.state;
     return (
       <div>
-        <button type="button" onClick={this.changeLanguage}>
-          Change Language
-        </button>
-        <button type="button" onClick={this.changeDirection}>
-          Change Direction
-        </button>
+        <Buttons
+          change={this.changeLanguage}
+          locale="en-US"
+          direc={this.changeDirection}
+          direction="left"
+        ></Buttons>
         <marquee direction={direction}>
           <h1>{date.toLocaleTimeString(locale)}</h1>
         </marquee>
-        {/* <marquee direction="right">
-          <h1>{date.toLocaleTimeString(locale)}</h1>
-        </marquee>
-        <marquee direction="up">
-          <h1>{date.toLocaleTimeString(locale)}</h1>
-        </marquee>
-        <marquee direction="down">
-          <h1>{date.toLocaleTimeString(locale)}</h1>
-        </marquee> */}
       </div>
     );
   }
