@@ -50,9 +50,7 @@ class Clock extends React.Component {
       <div>
         <Buttons
           change={this.changeLanguage}
-          locale="en-US"
-          direc={this.changeDirection}
-          direction="left"
+          direct={this.changeDirection}
         ></Buttons>
         <marquee direction={direction}>
           <h1>{date.toLocaleTimeString(locale)}</h1>

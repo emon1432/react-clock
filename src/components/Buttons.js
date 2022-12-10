@@ -11,15 +11,15 @@ class Buttons extends React.Component {
     return true;
   }
   render() {
-    console.log('button');
+    console.log("button");
     const { change } = this.props;
-    const { direc } = this.props;
+    const { direct } = this.props;
     return (
       <div>
         <button type="button" onClick={change}>
           Change Language
         </button>
-        <button type="button" onClick={direc}>
+        <button type="button" onClick={direct}>
           Change Direction
         </button>
       </div>
