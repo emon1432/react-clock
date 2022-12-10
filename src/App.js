@@ -1,10 +1,11 @@
 import React from "react";
-import Form from "./components/Form";
+import WaterBoil from "./components/WaterBoil";
+
 
 function App() {
   return (
     <div>
-      <Form />
+      <WaterBoil />
     </div>
   );
 }
